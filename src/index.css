@@ -1,0 +1,174 @@
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2?styles=44819,44823,44821');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind preflight;
+
+* {
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.requirements-header {
+  @apply grid items-center justify-center shadow-lg bg-white h-16 z-10 relative shadow-md;
+  grid-template-columns: 400px 150px 150px;
+  border : 1px solid #e2e8f0;
+}
+
+.level {
+  @apply grid items-center justify-center shadow-lg bg-white h-24 relative shadow-md;
+  grid-template-columns: 400px 150px 150px;
+  box-sizing: border-box;
+  border-top: 1px solid #e2e8f0;
+}
+
+.level-title {
+  @apply text-xl flex flex-row items-center justify-start px-6 text-start;
+  word-wrap: break-word;
+}
+
+.level-status {
+  @apply flex items-center justify-center;
+}
+
+.level-status p{
+  @apply relative  flex items-center justify-center text-xs font-bold rounded-full px-4 py-1 capitalize font-normal ;
+  width: 100px;
+}
+
+.level-status p.lock {
+  @apply bg-gray-200 border-2 border-gray-200 shadow-lg text-gray-700 ;
+}
+
+.level-status p.pending {
+  @apply bg-yellow-200 border-2 border-yellow-400 shadow-lg text-yellow-700;
+}
+
+.level-status p.unlock {
+  @apply bg-white border-2 border-gray-200 shadow-lg text-gray-700;
+}
+
+.level-status p.completed {
+  @apply bg-green-200 border-2 border-green-400 shadow-lg text-green-700;
+}
+
+.control {
+  @apply flex items-center justify-center;
+}
+
+.seniority-header {
+  @apply text-center font-bold text-sm uppercase mt-6;
+  background: linear-gradient(
+    136deg,
+    transparent 10%,
+    rgba(0, 152, 121, 0.5) 10%,
+    rgba(0, 152, 121, 0.5) 40%,
+    transparent 40%,
+    transparent 53%,
+    rgba(0, 152, 121, 0.5) 53%,
+    rgba(0, 152, 121, 0.5 ) 71%,
+    transparent 71%
+  ),
+  rgb(5, 106, 86);
+
+  width: 700px;
+  background-size: 600px 300px;
+  border-top-right-radius: 13px;
+  border-top-left-radius: 13px;
+  padding: 22px 16px;
+  row-gap: 3px;
+
+  color:rgb(225, 225, 225);
+}
+
+.seniority-header.Locked {
+  background: linear-gradient(
+    136deg,
+    transparent 10%,
+    rgba(114, 114, 114, 0.5) 10%,
+    rgba(114, 114, 114, 0.5) 40%,
+    transparent 40%,
+    transparent 53%,
+    rgba(114, 114, 114, 0.5) 53%,
+    rgba(114, 114, 114, 0.5) 71%,
+    transparent 71%
+  ),
+  rgb(179, 179, 179);
+
+
+  color:rgb(114, 114, 114);
+
+}
+
+.menu-controls {
+  @apply flex items-center justify-center absolute;
+  top: 100%;
+  z-index: 999;
+  border: 1px solid #e2e8f0;
+  background-color: white;
+  border-radius: 5px;
+  right: 0;
+}
+
+.menu-controls ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-controls li {
+  margin: 0;
+  padding: 0;
+  width: 110px;
+  display: flex;
+}
+
+.menu-controls a {
+  color: #000;
+  text-decoration: none;
+  padding: 5px 10px;
+  width: 110px;
+  display: flex;
+  font-weight: 200;
+  text-align: left;
+}
+
+.menu-controls a:hover {
+  background-color: #f5f5f5;
+}
+
+.controls-button {
+  position: relative;
+  width: fit-content;
+}
+
+.controls-button button {
+  background-color: #f8f8f8;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+
+.level-controls {
+  @apply flex items-center justify-center;
+  font-size: 14px;
+}
+
+div[role="row"].pruebita:hover {
+  background-color: rgb(164, 164, 164) !important;
+}
+
+.username-span {
+  position: absolute;
+  background: rgb(0, 152, 121);
+  color: white;
+  border-radius: 12px;
+  font-size: 12px;
+  padding: 2px 4px;
+  bottom: -20px;
+}
+
+.navbar-username {
+  position: relative;
+  justify-content: center!important;
+  align-items: center;
+}
